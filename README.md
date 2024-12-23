@@ -7,6 +7,8 @@ This project has two main goals:
 
 They're packed into a single project, because a recursive DNS server needs to have some kind of resolution implemented anyway. So it's a single application where switching between a standalone DNS server and stub resolver for Linux is just a matter of configuration.
 
+However, this repo has a monorepo-ish structure. `aegis-dns` only does the DNS server. It does not contain any web dashboard whatsoever, just an IPC interface (probably UDS/Named Pipe) to access detailed runtime data. In the future, a second project will exist in this repo to create a web dashboard similar to Pi-Hole's or AdGuard's.
+
 ## DNS-Server
 A simple overview of what Aegis will listen on and how it will be composed:
 
