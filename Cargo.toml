@@ -1,4 +1,6 @@
-[workspace]
-members = [
-    "aegis-dns"
-]
+[package]
+name = "aegis-dns"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
