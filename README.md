@@ -22,6 +22,6 @@ If you want to host a HTTPS server alongside, you need to use something like ngi
 An nginx config snippet will be available as soon as development is finished.
 
 ## DNS-Resolver
-The resolver will do everything that's DNS and encrypted DNS. However, it is currently NOT planned to implement mDNS and certainly not LLMNR. mDNS and `/etc/hosts`-lookup can both be handled by the Name Service Switch (NSS), which is pretty much the standard on Linux and I think BSD too. Windows' resolver API implements a similar system to my understanding.
+The resolver will do everything that's DNS and encrypted DNS. However, it is currently NOT planned to implement mDNS and certainly not LLMNR. mDNS can simultaneously be handled by systemd-resolved or Avahi, which also support DNS-SD.
 
-What's missing: how the stub resolver and the given network manager interact with each other, related to DHCP.
+What's missing: how the stub resolver and the given network manager interact with each other, related to DHCP and SLAAC. Either through shameless config file parsings or D-Bus, apparently.
